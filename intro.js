@@ -13,7 +13,7 @@ var addItem = function() {
 var addBFItem = function() {
     var list = document.getElementById("bfl");
     var newitem = document.createElement("li");
-    var text = fib(list.childElementCount)+","+fibR(list.childElementCount);;
+    var text = fib(list.childElementCount)+","+fibR(list.childElementCount);
     newitem.innerHTML = text;
     list.appendChild(newitem);
 };
@@ -35,11 +35,22 @@ var fibR = function(n) {
     }
 };
 
+var addRektItem = function() {
+    var list = document.getElementById("rektL");
+    var newitem = document.createElement("li");
+    var text = "Your life is worth: "+list.childElementCount*0;
+    newitem.innerHTML = text;
+    list.appendChild(newitem);
+};
+
 var b = document.getElementById("b");
 b.addEventListener("click",addItem);
 
 var bfb = document.getElementById("bfb");
 bfb.addEventListener("click",addBFItem);
+
+var rekt = document.getElementById("rekt");
+rekt.addEventListener("click",addRektItem);
 
 var startup = function() {
     var listitems = document.getElementsByTagName("li");
