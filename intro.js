@@ -43,6 +43,18 @@ var addRektItem = function() {
     list.appendChild(newitem);
 };
 
+var addSquareItem = function() {
+    var list = document.getElementById("sqr");
+    var newitem = document.createElement("li");
+    var text = sqr(list.childElementCount);
+    newitem.innerHTML = text;
+    list.appenChild(newitem);
+};
+
+var sqr = function(x) {
+    return x*x;
+};
+
 var b = document.getElementById("b");
 b.addEventListener("click",addItem);
 
@@ -51,6 +63,9 @@ bfb.addEventListener("click",addBFItem);
 
 var rekt = document.getElementById("rekt");
 rekt.addEventListener("click",addRektItem);
+
+var sqr = document.getElementById("sqr");
+sqr.addEventListener("click", addSquareItem);
 
 var startup = function() {
     var listitems = document.getElementsByTagName("li");
