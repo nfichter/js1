@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- demo basic JavaScript-->
 
 <html>
   <head>
@@ -8,9 +9,6 @@
       .blue { color : #0000ff;}
     </style>
   </head>
-
-  <button id="b">add an element to the list. nerd.</button>
-  <button id="bfb">add a boonch of eelements to da list dat follow da fibnatchi seekwhence</button>
 
   <body>
     <h1 id="h" class="blue">Hello World!</h1>
@@ -28,9 +26,6 @@
       <li>item 5</li>
       <li>item 6</li>
       <li>item 7</li>
-    </ol>
-
-    <ol id="bfl">
     </ol>
 
     <script src="intro.js"></script>

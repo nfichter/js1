@@ -1,8 +1,7 @@
 var addItem = function() {
     var list = document.getElementById("thelist");
     var newitem = document.createElement("li");
-    var listitems = document.getElementsByTagName("li");
-    var text = "item "+listitems.length;
+    var text = "item "+list.childElementCount;
     newitem.innerHTML = text;
     list.appendChild(newitem);
     newitem.addEventListener("mouseover",replaceHeader);
@@ -11,8 +10,36 @@ var addItem = function() {
     newitem.addEventListener("click",returnHeader);
 };
 
+var addBFItem = function() {
+    var list = document.getElementById("bfl");
+    var newitem = document.createElement("li");
+    var text = fib(list.childElementCount)+","+fibR(list.childElementCount);;
+    newitem.innerHTML = text;
+    list.appendChild(newitem);
+};
+
+var fib = function(n) {
+    var golden = (Math.sqrt(5)+1)/2.0;
+    return Math.round((Math.pow(golden,n+1)-Math.pow(-(golden),-(n+1)))/Math.sqrt(5));
+};
+
+var fibR = function(n) {
+    if (n == 0) {
+	return 1;
+    }
+    else if (n == 1) {
+	return 1;
+    }
+    else {
+	return fibR(n-1) + fibR(n-2);
+    }
+};
+
 var b = document.getElementById("b");
 b.addEventListener("click",addItem);
+
+var bfb = document.getElementById("bfb");
+bfb.addEventListener("click",addBFItem);
 
 var startup = function() {
     var listitems = document.getElementsByTagName("li");

@@ -1,0 +1,6 @@
+var addItem = function(text) {
+    var list = document.getElementById("thelist");
+    var newitem = document.createElement("li");
+    newitem.innerHTML = text;
+    list.appendChild(newitem);
+};
