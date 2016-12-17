@@ -44,15 +44,16 @@ var addRektItem = function() {
 };
 
 var addSquareItem = function() {
-    var list = document.getElementById("sqr");
+    var list = document.getElementById("sqrL");
     var newitem = document.createElement("li");
-    var text = sqr(list.childElementCount);
+    var text = getsqr(list.childElementCount);
     newitem.innerHTML = text;
-    list.appenChild(newitem);
+    list.appendChild(newitem);
 };
 
-var sqr = function(x) {
-    return x*x;
+var getsqr = function(x) {
+    var s = Math.pow(x+1, 2);
+    return s;
 };
 
 var b = document.getElementById("b");
